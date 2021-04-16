@@ -1,6 +1,6 @@
-8215e6a86515095b766b3f03f5f47fa7 *DESCRIPTION
-56d7df8069affff0893dd2aad1b6ae1a *NAMESPACE
-085fe0ccbe0f788f345dcaf1b2e42dc1 *NEWS.md
+798f995e0f09072bd0f2facff02f2251 *DESCRIPTION
+9be00390e308c6e4a5dc7d9c8822c382 *NAMESPACE
+aad4445ffca6bf82908ff8c2483a9d4f *NEWS.md
 2b4702932fcdf0b3b1bd754d213e4925 *R/EU.R
 2b40e02d33353ea3181042d480886fa2 *R/IT.R
 513a612f69b8511bbf5882059ead4d21 *R/US.R
@@ -16,7 +16,7 @@ bca71862d492c2978ae249a69a4c162c *R/mappingUS.R
 bde5c54dc884318878092e3aeeb9e800 *R/plots_interactive.R
 a5895260827a2e1e316be41e0d7302c6 *R/plots_static.R
 4868c3bb9a1040fdc9610a5e23af37eb *R/zzz.R
-dcb013adb3261449773c9aa90c01b63d *README.md
+8ecf1939281715fe518651f530cc79ea *README.md
 8210f332139125b6618231db33f0410c *build/vignette.rds
 bb89d036469580e23d4913ae8ab76d3b *data/namesEU.rda
 d83aa452184081e1cb3b6604f93bb07b *data/namesIT.rda
@@ -30,8 +30,8 @@ de65fe37317be09022e2a92b7936b07d *data/popWR.rda
 f05a1e22e5136df01320a865b61951a1 *data/tax_wedge_ocde.rda
 6dacd6fef3397b455cb6244dc938f42d *data/usa_election.rda
 2548b21e3717bf8a0e3aa2640def676d *inst/doc/a-journey-into-mapping.R
-bd886569583bbd7e940137e182dc7c81 *inst/doc/a-journey-into-mapping.Rmd
-d84586ff53f0d4096e32b6aefe957233 *inst/doc/a-journey-into-mapping.html
+9af58ea4e1cb00699ea0fda4659af170 *inst/doc/a-journey-into-mapping.Rmd
+607c4f44e7a636080a6fa1a76ce50b24 *inst/doc/a-journey-into-mapping.html
 850a5fb65dd6f57e672ec973dc51b9fd *man/EU.Rd
 8367a7726e78972a956b00fbebf78e91 *man/IT.Rd
 4316ad0d0e2ce1dcc363291d222822b3 *man/US.Rd
@@ -64,4 +64,4 @@ aedd4445b2f6c468f86c08c8dcfc7f35 *man/popWR.Rd
 e703b09d0a551439d1e76ea435950cb7 *man/saveObj.Rd
 e700e293b09c1e2ecc5799a9d4edfa63 *man/tax_wedge_ocde.Rd
 f97931bfd2034c76637eb8b4e8192bc0 *man/usa_election.Rd
-bd886569583bbd7e940137e182dc7c81 *vignettes/a-journey-into-mapping.Rmd
+9af58ea4e1cb00699ea0fda4659af170 *vignettes/a-journey-into-mapping.Rmd
