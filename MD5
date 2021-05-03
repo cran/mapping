@@ -1,4 +1,4 @@
-798f995e0f09072bd0f2facff02f2251 *DESCRIPTION
+0fbb9463430a21b3ad398bc0a47e4b64 *DESCRIPTION
 9be00390e308c6e4a5dc7d9c8822c382 *NAMESPACE
 aad4445ffca6bf82908ff8c2483a9d4f *NEWS.md
 2b4702932fcdf0b3b1bd754d213e4925 *R/EU.R
@@ -31,7 +31,7 @@ f05a1e22e5136df01320a865b61951a1 *data/tax_wedge_ocde.rda
 6dacd6fef3397b455cb6244dc938f42d *data/usa_election.rda
 2548b21e3717bf8a0e3aa2640def676d *inst/doc/a-journey-into-mapping.R
 9af58ea4e1cb00699ea0fda4659af170 *inst/doc/a-journey-into-mapping.Rmd
-607c4f44e7a636080a6fa1a76ce50b24 *inst/doc/a-journey-into-mapping.html
+a7584bfaf5e1ea44999ceb6396a540fa *inst/doc/a-journey-into-mapping.html
 850a5fb65dd6f57e672ec973dc51b9fd *man/EU.Rd
 8367a7726e78972a956b00fbebf78e91 *man/IT.Rd
 4316ad0d0e2ce1dcc363291d222822b3 *man/US.Rd
