@@ -24,6 +24,8 @@ loadCoordEU <- function(unit = c("nuts0","nuts1", "nuts2", "nuts3", "urau"),
   file <- paste("eu_",year,"_",unit, "_",scale,"m",".geojson", sep = "")
   nn <- paste(unit,year,sep = "_")
 
+  download <- TRUE
+  
   if(use_cache)
   {
     fl <- list.files(tempdir())
@@ -53,13 +55,11 @@ loadCoordEU <- function(unit = c("nuts0","nuts1", "nuts2", "nuts3", "urau"),
       {
         if(unit == "urau")
         {
-          url <- paste("https://raw.githubusercontent.com/dataallaround/geospatial/master/EU/urau/", file, sep = "")
+          url <- paste("https://raw.githubusercontent.com/mappinguniverse/geospatial/master/EU/urau/", file, sep = "")
         }else{
-          url <- paste("https://raw.githubusercontent.com/dataallaround/geospatial/master/EU/nuts/GeoJSON/", file, sep = "")
+          url <- paste("https://raw.githubusercontent.com/mappinguniverse/geospatial/master/EU/nuts/GeoJSON/", file, sep = "")
         }
         response <- FALSE
-        # resp <- GET(url)
-        # response <- http_error(resp)
 
         if(!response)
         {
@@ -84,7 +84,6 @@ loadCoordEU <- function(unit = c("nuts0","nuts1", "nuts2", "nuts3", "urau"),
 
 
   coord <- st_transform(coord, crs = crs)
-  # coord <- suppressMessages(suppressWarnings((st_buffer(coord,0))))
   coord <- st_make_valid(coord)
   class(coord) <- c(class(coord),"EU")
   attributes(coord)$unit <- unit
@@ -332,10 +331,6 @@ EU <- function(data, colID = NULL,
                          by = list(var = out[, aggregation_unit, drop = TRUE]), FUN = aggregation_fun)
         colnames(out)[1] <- aggregation_unit
         facets_join <- NULL
-        # out[,aggregation_unit] <- tolower(out[,aggregation_unit, drop = TRUE])
-        # nm[,aggregation_unit] <- as.character(tolower(nm[,aggregation_unit, drop = TRUE]))
-        # out[,aggregation_unit] = as.character(out[,aggregation_unit, drop = TRUE])
-        # out <- suppressWarnings(left_join(out, nm,aggregation_unit))
 
         }else{
 
@@ -395,13 +390,11 @@ EU <- function(data, colID = NULL,
 
       colID <- aggregation_unit
       colName <- aggregation_unit
-      # attributes(data)$unit <- unit
-      # attributes(data)$colID <- colID
 
     }else{
       if(isFALSE(show_eu))
       {
-        #out <- suppressMessages(left_join(coord, out[,-ncol(out), drop = TRUE]))
+
         out <- out[out[,colName, drop = TRUE] %in% data[,colName],]
 
       }else{

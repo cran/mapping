@@ -18,3 +18,9 @@
 
 - Fix messagge from sp
 - remove vignettes
+
+# mapping 1.4.1 (2023 - 12)
+
+- fix subset arguments
+- fix add variable arguments
+- change description with new webpage

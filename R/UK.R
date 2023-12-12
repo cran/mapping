@@ -19,6 +19,8 @@ loadCoordUK <- function(unit = c("country","county"),
   file <- paste("uk_",year,"_",unit, "_",scale,"m",".geojson", sep = "")
   nn <- paste(unit,year,sep = "_")
   
+  download <- TRUE
+  
   if(use_cache)
   {
     fl <- list.files(tempdir())
@@ -46,11 +48,9 @@ loadCoordUK <- function(unit = c("country","county"),
     }else{
       if(internet | use_internet)
       {
-        url <- paste("https://raw.githubusercontent.com/dataallaround/geospatial/master/UK/GeoJSON/", file, sep = "")
+        url <- paste("https://raw.githubusercontent.com/mappinguniverse/geospatial/master/UK/GeoJSON/", file, sep = "")
         scaleponse <- FALSE
-        # scalep <- GET(url)
-        # scaleponse <- http_error(scalep)
-        
+
         if(!scaleponse)
         {
           
@@ -74,7 +74,6 @@ loadCoordUK <- function(unit = c("country","county"),
   
   
   coord <- st_transform(coord, crs = crs)
-  # coord <- suppressMessages(suppressWarnings((st_buffer(coord,0))))
   coord <- st_make_valid(coord)
   class(coord) <- c(class(coord),"UK")
   attributes(coord)$unit <- unit
@@ -315,10 +314,6 @@ UK <- function(data, colID = NULL,
                          by = list(var = out[, aggregation_unit, drop = TRUE]), FUN = aggregation_fun)
         colnames(out)[1] <- aggregation_unit
         facets_join <- NULL
-        # out[,aggregation_unit] <- tolower(out[,aggregation_unit, drop = TRUE])
-        # nm[,aggregation_unit] <- as.character(tolower(nm[,aggregation_unit, drop = TRUE]))
-        # out[,aggregation_unit] = as.character(out[,aggregation_unit, drop = TRUE])
-        # out <- suppressWarnings(left_join(out, nm,aggregation_unit))
         
       }else{
         
@@ -378,8 +373,6 @@ UK <- function(data, colID = NULL,
     
     colID <- aggregation_unit
     colName <- aggregation_unit
-    # attributes(data)$unit <- unit
-    # attributes(data)$colID <- colID
     
   }else{
 
